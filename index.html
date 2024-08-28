@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web A Example</title>
+    <title>Web AR Example</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-    <body>
-        <a-scene embedded arjs>
-            
-            <a-marker preset='hiro'></a-marker>
-            <!-- it is the same as the marker below -->
-            <a-marker type='pattern' url='http://examples.org/hiro.patt'></a-marker>
-
-            <!-- <a-marker type="pattern" url="assets/markers/custom-marker.patt"> -->
-                <a-entity gltf-model="url(assets/models/3d-model.gltf)" scale="1 1 1" position = "0 0 0"></a-entity>
-            </a-marker>
-            <a-entity camera></a-entity>
-        </a-scene>
-        
-    </body>
-    
+    <a-scene embedded arjs>
+        <a-marker type="pattern" url="assets/markers/custom-marker.patt">
+            <a-entity gltf-model="url(assets/models/3d-model.gltf)" scale="0.5 0.5 0.5" position="0 0 0"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 </html>
